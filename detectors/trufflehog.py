@@ -58,20 +58,15 @@ class TruffleHog(Detector):
             parts = line.split(':')
             if "Reason" in parts[0]:
                 Reason = parts[1]
-                self.logger.info("Reason = " + Reason)
                 # findings.append(Finding(, parts[1], "unknown",link=commit_link))
             if "Hash" in parts[0]:
                 Hash = parts[1]
-                self.logger.info("Hash = " + Hash)
             if "Filepath" in parts[0]:
                 Filepath = parts[1]
-                self.logger.info("Filepath = " + Filepath)
             if "Branch" in parts[0]:
                 Branch = parts[1]
-                self.logger.info("Branch = " + Branch)
             if "Commit" in parts[0]:
                 Commit = parts[1]
-                self.logger.info("Commit = " + Commit)
             if Commit is not '':
                 findings.append(Finding(Filepath, Reason, "unknown",None,commit_link+"/commit/"+Hash))
                 Reason = ''
