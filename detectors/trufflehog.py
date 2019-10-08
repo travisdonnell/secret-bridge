@@ -14,7 +14,7 @@ class TruffleHog(Detector):
         if path is not None:
             self._binary_path = path
         else:
-            self._binary_path = "truffleHog"
+            self._binary_path = "trufflehog"
         self.logger = logging.getLogger("TruffleHog")
 
     @property
