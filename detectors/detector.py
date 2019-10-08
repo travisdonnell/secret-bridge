@@ -9,7 +9,7 @@ class Detector(ABC):
     @abstractmethod
     def name(self):
         """A constant string representing the name of the detector.
-        Ex: "git-secrets", "detect-secrets"
+        Ex: "git-secrets", "detect-secrets", "trufflehog"
         """
         pass
 
